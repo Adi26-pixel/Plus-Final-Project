@@ -1,11 +1,12 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #eaf6f6;
 }
 
 h1 {
-  color: #878787;
-  font-size: 24px;
-  font-weight: 100;
+  color: #24609b;
+  font-size: 21px;
+  font-weight: 600;
   line-height: 28px;
   margin-bottom: 0;
 }
@@ -20,9 +21,9 @@ li {
   margin: 0;
   padding: 0;
 
-  color: rgb(135, 135, 135);
-  font-size: 16px;
-  font-weight: 100;
+  color: #24609b;
+  font-size: 14px;
+  font-weight: 300;
   line-height: 19px;
 }
 
@@ -34,23 +35,47 @@ a {
   text-decoration: none;
 }
 
-.open-sourced {
+p {
+  margin-top: 30px;
   text-align: center;
+  font-size: 12px;
+}
+
+hr {
+  color: lightgray;
 }
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 80px auto;
 }
 
 .weather-app {
-  padding: 20px;
-  border: 1px solid #dadae1;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 7px 13px 14px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.weather-section {
+  background-color: #c3e1fe;
+  padding: 10px 20px 20px 20px;
   border-radius: 10px;
 }
 
 .overview {
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.date {
+  color: #24609b;
+}
+
+.weather-temperature {
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .weather-temperature img {
@@ -60,7 +85,7 @@ a {
 }
 
 .weather-temperature strong {
-  color: rgb(33, 33, 33);
+  color: #24609b;
   font-size: 64px;
   line-height: 1;
   font-weight: 400;
@@ -70,11 +95,7 @@ a {
   position: relative;
   font-size: 16px;
   top: -34px;
-}
-
-.weather-temperature .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
+  color: #24609b;
 }
 
 .weather-temperature .active:hover {
@@ -82,14 +103,14 @@ a {
 }
 
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   text-align: center;
-  color: #000;
+  color: #24609b;
 }
 
 .weather-forecast-date {
   font-size: 16px;
-  opacity: 0.5;
 }
 
 .weather-forecast-temperatures {
@@ -98,4 +119,8 @@ a {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+.fa-solid {
+  color: #24609b;
 }
