@@ -69,11 +69,8 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  //console.log(coordinates);
   let apiKey = "38cc12b312104o45t5c1faaa8bf9b6c0";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
-
-  //console.log(apiUrl);
 
   axios.get(apiUrl).then(displayForecast);
 }
@@ -100,8 +97,6 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
-
-  console.log(response.data);
 
   getForecast(response.data.coordinates);
 }
