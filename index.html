@@ -8,6 +8,14 @@
       rel="stylesheet"
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/d139762293.js"
+      crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
@@ -16,6 +24,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <!-- Header -->
           <form id="search-form" class="mb-3">
             <div class="row">
               <div class="col-9">
@@ -34,15 +43,23 @@
               </div>
             </div>
           </form>
-          <div class="overview">
-            <h1 id="city"></h1>
-            <ul>
-              <li>Last updated: <span id="date"></span></li>
-              <li id="description"></li>
-            </ul>
-          </div>
-          <div class="row">
-            <div class="col-6">
+          <hr />
+          <!-- Display weather data -->
+          <div class="weather-section">
+            <div class="row">
+              <div class="col-6 text-start">
+                <div class="overview">
+                  <h1><i class="fa-solid fa-location-dot"></i>
+                    <span id="city"></span></h1>
+                    
+                  </h1>
+                </div>
+              </div>
+              <div class="col-6 text-end">
+                <div class="overview date">
+                  <span id="date"></span>
+                </div>
+              </div>
               <div class="d-flex weather-temperature">
                 <img src="" alt="" class="float-left" id="icon" />
                 <div class="float-left">
@@ -51,22 +68,33 @@
                 </div>
               </div>
             </div>
-            <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind: <span id="wind"></span>km/h</li>
-              </ul>
+            <div class="row text-center">
+              <div class="col-4 text-start">
+                <ul>
+                  <li><span id="description"></span></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <ul>
+                  <li><i class="fa-solid fa-droplet"></i>  <span id="humidity"></span>%</li>
+                </ul>
+              </div>
+              <div class="col-4 text-end">
+                <ul>
+                  <li><i class="fa-solid fa-wind"></i>  <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
             </div>
           </div>
+          <hr />
+          <!-- Forecast -->
           <div class="weather-forecast" id="forecast"></div>
         </div>
-        <small>
-          <a
-            href="https://github.com/Adi26-pixel/Plus-Final-Project"
-            target="_blank"
-            >Open Source Code</a
-          >, by Adeline Monsengo.
-        </small>
+        <p>This project was coded by Adeline and is a
+          <a href="https://github.com/Adi26-pixel/Plus-Final-Project" target="_blank"
+            >Open Source Code on GitHub</a
+          >.
+        </p>
       </div>
     </div>
     <script src="src/app.js"></script>
